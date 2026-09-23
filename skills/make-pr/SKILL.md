@@ -19,11 +19,11 @@ Use `gh` for GitHub (issues, PRs, checks, releases). Do not add Copilot or other
 
 ## Drafting the PR
 
-Follow `.github/pull_request_template.md` when it exists. Skip the first "YES" contributing section (or similar) and any "Additional context" section (or similar). Add a `## To test` section with clear callsites for a reviewer who doesn't have much time and just needs to click around the most important, easy-to-find callsites. Keep the overall description succinct. No em dashes. Write headings in sentence case.
+Follow `.github/pull_request_template.md` when it exists. Skip any purely optional sections or gates. Keep the overall description succinct. No em dashes. Write headings in sentence case. Unless a similar section already exists in the template, add a `## Review instructions` section.
 
-If the repo has no `.github/pull_request_template.md`, skip the template and still add `## To test`. If the template has no "YES" contributing section or "Additional context" section, skip those instructions.
+If the repo has no `.github/pull_request_template.md`, make a minimal description following a standard "problem" and "solution" format. Still add `## Review instructions` or similar, when relevant.
 
-## To test
+## Review instructions
 
 Write callsites a busy reviewer can click without setup. Prefer:
 
@@ -31,7 +31,7 @@ Write callsites a busy reviewer can click without setup. Prefer:
 - The control to click, in the state it should already be in
 - What they should see
 
-Use a deploy preview URL (e.g. Vercel) in those testing instruction callsites if available.
+Use a deploy preview URL (e.g. Vercel) in those callsites if available. Skip or keep brief when there is nothing to click.
 
 Avoid long environment setup unless the PR cannot be reviewed without it.
 
